@@ -76,7 +76,7 @@ export default async function TeamMemberDetail({
 
   if (!slug) <p>No member found</p>;
 
-  const teamMember = await getTeamMember(slug);
+  const teamMember = (await getTeamMember(slug)) as UserProfile;
 
   return (
     <div>
