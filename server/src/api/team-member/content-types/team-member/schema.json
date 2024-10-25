@@ -4,7 +4,8 @@
   "info": {
     "singularName": "team-member",
     "pluralName": "team-members",
-    "displayName": "Team Member"
+    "displayName": "Team Member",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,15 +20,24 @@
       "type": "text"
     },
     "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.testimonial",
+        "blocks.spoiler",
+        "blocks.rich-text"
+      ]
     }
   }
 }
